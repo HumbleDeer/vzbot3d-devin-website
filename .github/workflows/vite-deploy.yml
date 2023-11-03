@@ -37,7 +37,9 @@ jobs:
       - name: Install dependencies
         run: npm install
       - name: Build
-        run: npm run build
+        run: npm run build --base $VITE_BASE_URL
+        env:
+          VITE_BASE_URL: "website/"
       - name: Upload GH Pages artifact
         uses: actions/upload-pages-artifact@v2  
         with:
