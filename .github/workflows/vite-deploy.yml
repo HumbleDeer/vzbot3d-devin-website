@@ -36,7 +36,7 @@ jobs:
           cache: 'npm'
       - name: Install dependencies
         run: npm install
-      - name: Vite: Build
+      - name: Vite Build
         run: vite build --base=$VITE_BASE_URL
         env:
           VITE_BASE_URL: "website/"
